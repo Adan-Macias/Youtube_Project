@@ -12,7 +12,7 @@ Repo for YouTube comment Analysis using YouTube API
  # Code & Resources 
  #### Python Version: 3.7
  #### YouTube data API : https://developers.google.com/youtube/v3/docs/commentThreads/list
- #### Packages: pandas, sqlite3, collections, emoji
+ #### Packages: pandas, sqlite3, collections
   
  # YouTube Data API:
   - Various attributes are pulled by iterating through nested dictionary located in API response.
@@ -29,18 +29,19 @@ Repo for YouTube comment Analysis using YouTube API
 # Data Cleaning & Filtering: Parsing comments Algorithm
   - Array data Structures utilized to manipulate and organize commentThreads
   - Occurences logged for commentThreads while omitting special characters **[';', ':', '!', "*", '.', ',', '"', '?']**.
-  - Comment emojis along with frequencies are logged using **UNICODE_EMOJI**.
   
 # Excel & Dataframes: Data Storage/Results
   - **word_occurence.xlsx** contains all cleaned/parsed comment data, leaving original data unchanged in **comments.xlsx**.
   - **word_occurence.xlsx** is overitten by popularKeywords() with new sheet containing FREQUENCY condition.
   - **comments_filtered.xlsx** is generated when SQL keyword function is used to retrieve and store comments based on desired keywords.
 
-
+# DATA VISUALIZATION: 
+#### **This Process Automatically Saves Data Visuals After Execution*
 ## Data Visual #1: YouTube commentThread Popularity Along With Popular Authors/Users On Target Video(100 comments).
 ![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/popularity_100.png)
 
 ## Data Visual #2: Keyword Functionality Which Generates Data Only On Comments With Target Keywords Passed Into SQL Filter/Query.
 ![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/keyword_comments.png)
+
 
 

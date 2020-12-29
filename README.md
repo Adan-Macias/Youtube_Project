@@ -37,10 +37,10 @@ Repo for YouTube comment Analysis using YouTube API
   - **comments_filtered.xlsx** is generated when SQL keyword function is used to retrieve and store comments based on desired keywords.
 
 
-## Data Visual 1: YouTube commentThread popularity along with popular Authors/Users on target video(100 comments).
+## Data Visual #1: YouTube commentThread Popularity Along With Popular Authors/Users On Target Video(100 comments).
 ![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/popularity_100.png)
 
-## Data Visual 2: Keyword functionality which generates data only on comments with target keywords passed into SQL filter/Query.
+## Data Visual #2: Keyword Functionality Which Generates Data Only On Comments With Target Keywords Passed Into SQL Filter/Query.
 ![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/keyword_comments.png)
 
 

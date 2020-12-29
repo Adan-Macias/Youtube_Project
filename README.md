@@ -21,20 +21,26 @@ Repo for YouTube comment Analysis using YouTube API
   - *API key required to use YouTube Data API functionality.*
   
 # SQL: Keyword functionality [Optional Feature]
-  - Optional SQL functionality which queries.
+  - Option 1: SQL functionality which queries.
   - Format consists of **[COMMENT LIKE '%KEYWORD%]**
     - This SQL query may conatin multiple Keywords an filter commentThread response further.
-  - Default SQL query retrieves all attributes/columns from **comments.xlsx** containing target video data.
+  - Option 2: SQL query retrieves all attributes/columns from **comments.xlsx** containing target video data.
   
 # Data Cleaning & Filtering: Parsing comments Algorithm
   - Array data Structures utilized to manipulate and organize commentThreads
-  - Occurences logged for commentThreads while omitting special characters **[';', ':', '!', "*", '.', ',', '" "', '?']**.
+  - Occurences logged for commentThreads while omitting special characters **[';', ':', '!', "*", '.', ',', '"', '?']**.
   - Comment emojis along with frequencies are logged using **UNICODE_EMOJI**.
   
 # Excel & Dataframes: Data Storage/Results
   - **word_occurence.xlsx** contains all cleaned/parsed comment data, leaving original data unchanged in **comments.xlsx**.
   - **word_occurence.xlsx** is overitten by popularKeywords() with new sheet containing FREQUENCY condition.
+  - **comments_filtered.xlsx** is generated when SQL keyword function is used to retrieve and store comments based on desired keywords.
 
 
-## Demonstration of data visuals by comparing touchdowns and sacks
+## Data Visual 1: YouTube commentThread popularity along with popular Authors/Users on target video(100 comments).
+![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/popularity_100.png)
+
+## Data Visual 2: Keyword functionality which generates data only on comments with target keywords passed into SQL filter/Query.
+![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/keyword_Popularity.png)
+
 

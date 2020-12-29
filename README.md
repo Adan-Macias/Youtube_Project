@@ -41,6 +41,6 @@ Repo for YouTube comment Analysis using YouTube API
 ![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/popularity_100.png)
 
 ## Data Visual 2: Keyword functionality which generates data only on comments with target keywords passed into SQL filter/Query.
-![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/keyword_Popularity.png)
+![](https://raw.githubusercontent.com/Adan-Macias/Youtube_Project/main/Data_Visuals/filtered_comments.png)
 
 

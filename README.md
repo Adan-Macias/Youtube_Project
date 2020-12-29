@@ -34,6 +34,7 @@ Repo for YouTube comment Analysis using YouTube API
   - **word_occurence.xlsx** contains all cleaned/parsed comment data, leaving original data unchanged in **comments.xlsx**.
   - **word_occurence.xlsx** is overitten by popularKeywords() with new sheet containing FREQUENCY condition.
   - **comments_filtered.xlsx** is generated when SQL keyword function is used to retrieve and store comments based on desired keywords.
+  - **comments.xlsx** contains original un-alterd Data from API request
 
 # DATA VISUALIZATION: 
 #### **This Process Automatically Saves Data Visuals After Execution*

@@ -10,8 +10,6 @@ import emoji
 from matplotlib.font_manager import FontProperties
 
 
-
-
 # Displaying function which filters datframes and outputs Data Visuals
 # Data visuals demonstrate stats on popular comments on target videoID on original 100 comments
 def displayVisuals100():
@@ -153,7 +151,7 @@ def parseWords():
     # Counter Dictionary
     x = Counter(map(str.lower, wordlist))
 
-    # Dataframe1
+    # Dataframe
     data1 = pd.DataFrame.from_dict(x, orient= 'index')
     data1.columns = ['FREQUENCY']
     data1.to_excel(output, sheet_name='OCCURENCE')

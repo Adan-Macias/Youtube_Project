@@ -14,8 +14,8 @@ from matplotlib.font_manager import FontProperties
 # Data visuals demonstrate stats on popular comments on target videoID on original 100 comments
 def displayVisuals100():
     #INPUT
-    file = pd.ExcelFile("/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/comments.xlsx")
-    df = pd.read_excel("/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/comments.xlsx")
+    file = pd.ExcelFile("YOUR PATH/Data/comments.xlsx")
+    df = pd.read_excel("YOUR PATH/comments.xlsx")
 
     #Filter data for visual #1
     filter1 = df[(df.LIKES >= 1)]
@@ -66,16 +66,16 @@ def displayVisuals100():
     table.auto_set_font_size(False)
     table.set_fontsize(12)
     table.scale(1, 2) 
-    plt.savefig('C:/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data_Visuals/popularity_100.png')
+    plt.savefig('YOUR PATH/popularity_100.png')
 
 # This function contains two options to retrieve comments
 # First option uses SQL to retrieve comments with specific KEYWORDS
 # Second option retrieves all commentThreads (copy) to avoid altering original Data
 def keywordSearch():
     # INPUT
-    file = "/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/comments.xlsx"
+    file = "/YOUR PATH/comments.xlsx"
     # OUTPUT
-    output = pd.ExcelWriter("C:/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/comments_filtered.xlsx", engine='xlsxwriter')
+    output = pd.ExcelWriter("YOUR PATH/comments_filtered.xlsx", engine='xlsxwriter')
 
     # Creating sql engine to use SQL/reading Excel sheets
     engine = create_engine('sqlite://', echo=False)
@@ -109,9 +109,9 @@ def keywordSearch():
 # Results are transferred to excel sheets using Dataframes (Data is overwritten by popularKeywords() to avoid redundancy)
 def parseWords():
     # INPUT
-    file = "C:/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/comments_filtered.xlsx" 
+    file = "YOUR PATH/comments_filtered.xlsx" 
     # OUTPUT
-    output = pd.ExcelWriter("C:/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/word_occurence.xlsx", engine='xlsxwriter')
+    output = pd.ExcelWriter("YOUR PATH/word_occurence.xlsx", engine='xlsxwriter')
 
     # Special Characters to be removed
     bad_chars = [';', ':', '!', "*", '.', ',', '"', '?']
@@ -163,10 +163,10 @@ def parseWords():
 # Overwrite word_occurence.xlsx Data to avoid redundancy.    
 def popularKeywords():
     # INPUT FILES
-    file1 = "/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/word_occurence.xlsx"
-    file2 = pd.ExcelFile("/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/comments_filtered.xlsx")
+    file1 = "/YOUR PATH/word_occurence.xlsx"
+    file2 = pd.ExcelFile("/YOUR PATH/comments_filtered.xlsx")
     # OUTPUT FILES
-    output = pd.ExcelWriter("C:/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data/word_occurence.xlsx", engine='xlsxwriter')
+    output = pd.ExcelWriter("YOUR PATH/word_occurence.xlsx", engine='xlsxwriter')
 
     df1 = pd.read_excel(file1, sheet_name='OCCURENCE')
     df2 = pd.read_excel(file2, sheet_name='Comments')
@@ -210,7 +210,7 @@ def popularKeywords():
     table.auto_set_font_size(False)
     table.set_fontsize(7)
     table.scale(1.3, 2.5) 
-    plt.savefig('C:/Users/melen/Desktop/PORTFOLIO/YouTube_Project/Data_Visuals/filtered_comments.png')
+    plt.savefig('YOUR PATH/filtered_comments.png')
     
     output.save() 
 

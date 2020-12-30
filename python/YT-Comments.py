@@ -8,7 +8,7 @@ import time
 import MySQLdb as sql_db
 
 # API KEY
-api_key = 'AIzaSyBzDwpMmJY5ZJ_UdRKsiF5oB8E7gGMoVZs'
+api_key = 'YOUR API KEY'
 
 # Target Video
 VIDEO = "Jq7AexEUFHM"
@@ -37,7 +37,7 @@ def parseYTComments(response):
 
 # Dumping collected attributes into excel sheet for further filtering.
 def transferToExcel(col1, col2, col3, col4, col5):
-    dataToExcel = pd.ExcelWriter("C:/Users/melen/desktop/PORTFOLIO/YouTube_Project/Data/comments.xlsx", engine='xlsxwriter')
+    dataToExcel = pd.ExcelWriter("YOUR PATH/comments.xlsx", engine='xlsxwriter')
     data = pd.DataFrame({'AUTHOR': col1,'COMMENT': col2,'LIKES':col3,'AUTHOR CHANNEL': col4, 'DATE': col5})
     data.to_excel(dataToExcel, sheet_name='Comments')
     dataToExcel.save()

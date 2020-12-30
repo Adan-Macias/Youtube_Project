@@ -27,8 +27,10 @@ Repo for YouTube comment Analysis using YouTube API
   - Option 2: SQL query retrieves all attributes/columns from **comments.xlsx** containing target video data.
   
 # Data Cleaning & Filtering: Parsing comments Algorithm
-  - Array data Structures utilized to manipulate and organize commentThreads
+  - Array & Dictionary data Structures utilized to manipulate and organize commentThreads
   - Occurences logged for commentThreads while omitting special characters **[';', ':', '!', "*", '.', ',', '"', '?']**.
+  - Data type conversion takes place before inserting into data structures/Algorithms.
+  - Cleaned/Filtered data dumped into spreadsheets for storage and data retrieval using SQL/Dataframes.
   
 # Excel & Dataframes: Data Storage/Results
   - **word_occurence.xlsx** contains all cleaned/parsed comment data, leaving original data unchanged in **comments.xlsx**.

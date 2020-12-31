@@ -7,7 +7,6 @@ Repo for YouTube comment Analysis using YouTube API
 - Comments are analyzed based on a limited value of 100.
 - Target videoID's can be filtered by SQL functionality [optional].
 - Main purpose of this project is to isolate comments & word usage to log popular words or trending strings per videoID.
-- Emoji frequency is also logged on target videoID.
  
  # Code & Resources 
  #### Python Version: 3.7
